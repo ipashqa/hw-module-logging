@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogReader
 {
@@ -10,7 +6,13 @@ namespace LogReader
     {
         static void Main(string[] args)
         {
-            
+            LogReader logReader = new LogReader();
+
+            Console.WriteLine($"Errors: {logReader.GerErrorsCount()}");
+            Console.WriteLine(logReader.GetLogMetadata());
+
+            Console.WriteLine("DONE.");
+            Console.ReadLine();
         }
     }
 }
